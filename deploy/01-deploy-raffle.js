@@ -33,9 +33,9 @@ module.exports = async function ({ getNamedAccounts, deployments }) {
         vrfCoordinatorV2Address,
         entranceFee,
         gasLane,
+        subscriptionId,
         callbackGasLimit,
         interval,
-        subscriptionId,
     ]
     const raffle = await deploy("Raffle", {
         from: deployer,
