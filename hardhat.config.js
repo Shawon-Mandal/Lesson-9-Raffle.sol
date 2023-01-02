@@ -13,6 +13,12 @@ const COINMARKETCAP_API_KEY = process.env.COINMARKETCAP_API_KEY
 const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY
 
 module.exports = {
+    etherscan: {
+        apiKey: {
+            goerli: ETHERSCAN_API_KEY,
+        },
+    },
+
     defaultNetwork: "hardhat",
     networks: {
         hardhat: {
@@ -20,10 +26,10 @@ module.exports = {
             blockConfirmations: 1,
         },
         goerli: {
-            chainId: 5,
-            blockConfirmations: 6,
             url: GOERLI_RPC_URL,
             accounts: [PRIVATE_KEY],
+            chainId: 5,
+            blockConfirmations: 6,
         },
     },
     gasReporter: {
